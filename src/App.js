@@ -1,25 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import React from "react";
+import {store} from './redux/store'
+import TaskList from './components/TaskList';
+import AddTask from './components/AddTask';
+import {Col} from 'react-bootstrap'
+function App(props) {
+    
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+
+
+    return (
+      <> 
+     <div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-secondary">Left</button>
+  <button type="button" class="btn btn-secondary">Middle</button>
+  <button type="button" class="btn btn-secondary">Right</button>
+</div>
+      <Col>
+      <AddTask/>
+       <TaskList/>
+       </Col>
+      
+      </>
+  
   );
-}
+
+    }
+
+
 
 export default App;
