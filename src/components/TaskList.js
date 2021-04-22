@@ -1,20 +1,24 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import {} from './style.css'
 import Task from './Task'
+//import {Card,Button} from 'react-bootstrap'
 
 
-const TaskList = () => {
-    const tasks = useSelector(state => state.reducer)
+const TaskList = ({tasks}) => {
+    console.log('data : ',tasks)
+
+
     return (
-        <div>
+        <>
+
             {tasks.map(todo=>{
                 return <Task key={todo.id}  todo={todo}/>
 
 
 
 })}
- 
-        </div>
+
+        </>
     )
 }
 
